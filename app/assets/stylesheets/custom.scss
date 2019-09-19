@@ -53,7 +53,7 @@ p {
 /* ヘッダー */
 
 #header {
-  background-color:teal
+  background-color:teal;
 }
 
 #logo {
@@ -62,7 +62,6 @@ p {
   font-size: 1.7em;
   font-style:italic;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -70,25 +69,94 @@ p {
 
 #logo:hover {
   color:silver;
-  text-decoration:none
+  text-decoration:none;
 }
 
 li .header-list{
   color:#fff !important;
-  font-weight:bold
+  font-weight:bold;
 }
 
 li .header-list:hover{
-  color:silver !important
+  color:silver !important;
 }
 
 #dropdown-title{
-  background-color:teal
+  background-color:teal;
 }
 
 li .dropdown-header{
   background-color:rgba(200,200,200,0.5);
-  font-weight:bold
+  font-weight:bold;
+}
+
+/* top */
+
+.checkbox-login span{
+  font-weight:normal;
+}
+
+#top-main{
+  background-color:rgba(255,255,255,0);
+}
+
+#top-main-title{
+  font-style:italic;
+  font-weight:bold;
+}
+
+.btn-form{
+  margin-top:10px;
+}
+
+#task-name{
+  font-size:1.8rem;
+}
+
+#table-tasks th{
+  vertical-align:middle;
+}
+
+#table-tasks td{
+  vertical-align:middle;
+}
+
+#table-task{
+  table-layout:fixed;
+  width:100%;
+}
+
+#table-task th{
+  vertical-align:middle;
+  white-space:nowrap;
+  text-align:center;
+}
+
+#table-task td{
+  word-wrap:break-word;
+}
+
+#table-users th{
+  vertical-align:middle;
+}
+
+#table-users td{
+  vertical-align:middle;
+}
+
+.label-user-division{
+  margin-left:5px;
+}
+
+#table-user{
+  table-layout:fixed;
+  width:100%;
+}
+
+#table-user th{
+  vertical-align:middle;
+  white-space:nowrap;
+  text-align:center;
 }
 
 /* デバッグウインドウ */
