@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tasks/new'
+
   root 'static_pages#top'
   
   #ユーザー登録画面
