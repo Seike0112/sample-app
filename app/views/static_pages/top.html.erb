@@ -14,17 +14,32 @@
 
     <div class="col-md-4">
       <h1>ログイン</h1>
-      <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="QoFjidKyWtRaoff5GQfS++qPmZhFgThh3YWaPqx5XAVPSTmH2wZVAQMN8Q0tvOsiten/TSVFAU8ZNfXZMhPNDQ==">
-        <label class="label-form" for="session_email">メールアドレス</label>
-        <input class="form-control" readonly="readonly" type="email" name="session[email]">
+      
+      <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="4Oe0RoDiPbJsp4YT2Ovb+UK0FUxGn7Ns6BLJ3dGhbkuLumO4BpLPXrlK5C3zmTnISbID+odpHP1myDCPSJXX4Q==">
+        
+        <% if current_user.nil? %>
+          <label class="label-form" for="session_email">メールアドレス</label>
+          <input class="form-control" type="email" name="session[email]">
     
-        <label class="label-form" for="session_password">パスワード</label>
-        <input class="form-control" readonly="readonly" type="password" name="session[password]">
+          <label class="label-form" for="session_password">パスワード</label>
+          <input class="form-control" type="password" name="session[password]">
           
-        <input type="submit" name="commit" value="ログイン状態です" class="btn btn-primary btn-block btn-form" disabled="disabled" data-disable-with="ログイン状態です">
-      </form>  
+          <label class="checkbox inline checkbox-login" for="remember-me">
+            <input name="session[remember_me]" type="hidden" value="0"><input id="remember-me" type="checkbox" value="1" name="session[remember_me]">
+            <span>ログイン情報を記憶する</span>
+          </label>        
+          <input type="submit" name="commit" value="ログイン" class="btn btn-primary btn-block btn-form" data-disable-with="ログイン">
+        <% else %>
+          <label class="label-form" for="session_email">メールアドレス</label>
+          <input class="form-control" readonly="readonly" type="email" name="session[email]">
+  
+          <label class="label-form" for="session_password">パスワード</label>
+          <input class="form-control" readonly="readonly" type="password" name="session[password]">
+        
+          <input type="submit" name="commit" value="ログイン状態です" class="btn btn-primary btn-block btn-form" disabled="disabled" data-disable-with="ログイン状態です">
+        <% end %>
+      </form>
+      
     </div>
-    
-  </div>
   
 </div>
