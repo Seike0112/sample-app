@@ -17,6 +17,7 @@ class TasksController < ApplicationController
       flash[:success] = '新規作成に成功しました。'
       redirect_to @task
     else
+      flash[:danger] = '新規作成に失敗しました'
       render :new
     end
   end
@@ -24,8 +25,8 @@ class TasksController < ApplicationController
   
     private
 
-    def task_params
-      params.require(:task).permit(:task_name, :note)
-    end
+      def task_params
+        params.require(:task).permit(:task_name, :note, :id)
+      end
     
 end

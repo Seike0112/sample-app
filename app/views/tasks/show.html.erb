@@ -1,28 +1,40 @@
 <div class="container">
       
- <h1>プロフィール</h1>
+ <h1>タスク詳細</h1>
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <table class="table table-bordered" id="table-user">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="table table-bordered" id="table-task">
         <tbody>
-        <tr>
-          <th class="active col-md-3">ID</th>
-          <td class="col-md-9"><%= current_user.id %></td>
-        </tr>
-        <tr>
-          <th class="active">名前</th>
-          <td><%= current_user.name %></td>
-        </tr>
-        <tr>
-          <th class="active">メールアドレス</th>
-          <td><%= current_user.email %></td>
-        </tr>
-        <tr>
-          <th class="active">作成日</th>
-          <td><%= current_user.created_at %></td>
-        </tr>
-      </tbody></table>
+          <tr>
+            <th class="active col-md-2">ID</th>
+            <td class="col-md-10"><%= @task.id %></td>
+          </tr>
+          <tr>
+            <th class="active">名称</th>
+            <td><%= @task.task_name %></td>
+          </tr>
+          <tr>
+            <th class="active">詳細</th>
+            <td>
+              <a><%= @task.note %></a>
+            </td>
+          </tr>
+          <tr>
+            <th class="active">作成日</th>
+            <td><%= @task.created_at %></td>
+          </tr>
+          <tr>
+            <th class="active">更新日</th>
+            <td><%= @task.updated_at %></td>
+          </tr>
+        </tbody>
+      </table>
+      
+        <div>
+          <a class="btn btn-lg btn-success" href="/users/1/tasks/215/edit">編集</a>
+          <a data-confirm="「テスト」を削除します。よろしいですか？" class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/1/tasks/215">削除</a>
+        </div>
     </div>    
   </div>
 
