@@ -21,7 +21,7 @@
         </tr>
         <tr>
           <th class="active">作成日</th>
-          <td><%= @user.created_at %></td>
+          <td><%= @user.created_at.strftime("%Y-%m-%d %H:%M") %></td>
         </tr>
       </tbody></table>
     </div>    
