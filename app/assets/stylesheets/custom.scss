@@ -159,6 +159,16 @@ li .dropdown-header{
   text-align:center;
 }
 
+.btn-form {
+  margin-top: 10px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
 /* デバッグウインドウ */
 
 .debug_dump {
@@ -227,6 +237,10 @@ input,button,select,textarea{
 }
 
 /* index */
+#task-name {
+    font-size: 18px;
+}
+
 .btn-lg,.btn-group-lg>.btn{
   padding:10px 16px;
   font-size:18px;
