@@ -3,4 +3,5 @@ class Task < ApplicationRecord
   
   validates :task_name,  presence: true, uniqueness: true, length: { maximum: 50 }
   validates :note,  length: { maximum: 50 }, allow_nil: true
+
 end

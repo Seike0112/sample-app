@@ -1,0 +1,13 @@
+<%= form_with(model: @task, local: true) do |f| %>
+  <%= render 'shared/error_messages_task' %>
+          
+  <%= f.label "名称", class: "label-form" %>
+  <%= f.text_field :task_name, class: "form-control" %>
+      
+  <%= f.label "詳細", class: "label-form" %>
+  <%= f.text_area :note, class: "form-control", rows: 5 %>
+            
+  <%= f.submit "更新", class: "btn btn-lg btn-primary btn-form " %>
+  <%= f.submit "キャンセル", class: "btn btn-default btn-form" %>
+          
+<% end %>    

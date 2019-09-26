@@ -17,7 +17,7 @@
           <tr>
             <th class="active">詳細</th>
             <td>
-              <a><%= @task.note %></a>
+              <a><%= Rinku.auto_link(@task.note).html_safe %></a>
             </td>
           </tr>
           <tr>

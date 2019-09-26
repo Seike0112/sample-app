@@ -13,7 +13,7 @@
           <%= f.label "詳細", class: "label-form" %>
           <%= f.text_area :note, class: "form-control", rows: 5 %>
           
-          <input type="submit" name="commit" value="新規登録" class="btn btn-lg btn-primary btn-form" data-disable-with="新規登録">
+          <%= f.submit "新規登録", class: "btn btn-lg btn-primary btn-form" %>
       
       <% end %>
     </div>
